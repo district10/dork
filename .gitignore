@@ -1,0 +1,6 @@
+csl/*
+.DS_Store
+tests/.shastore
+filters/*
+/*.pdf
+/*.odt
