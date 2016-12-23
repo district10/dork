@@ -1,6 +1,10 @@
 # 中文模板
 
-## 列表、加粗、斜体、上下标
+Markdown 是一种轻量级的标记语言，其用简单的标记语法便可达到排版的目的，其可以使
+我们更加专注于内容的编写，而不需过多关注排版。本文主要整理了 Markdown 中的常用
+的标记语法，以便自己与他人以后查用。
+
+## 列表、**加粗**、*斜体*、上下标
 
 有序列表
 
@@ -64,6 +68,7 @@ multiple lines.
 ## 代码
 
 ```
+# 检查字体
 $ texlua fontname.lua consola.ttf
 Fontname:   Consolas
 Fullname:   Consolas
@@ -72,15 +77,15 @@ Familyname: Consolas
 
 ## 引用
 
-[译言-为什么要探索宇宙](http://article.yeeyan.org/view/265546/309669)
+[译言-**为什么要探索宇宙**](http://article.yeeyan.org/view/265546/309669)
 
 >   那是在 400 年前，德国某小镇里有一位伯爵。他是个心地善良的人，他将自己收入的
 >   一大部分捐给了镇子上的穷人。这十分令人钦佩，因为中世纪时穷人很多，而且那时
 >   经常爆发席卷全国的瘟疫。一天，伯爵碰到了一个奇怪的人，他家中有一个工作台和
 >   一个小实验室，他白天卖力工作，每天晚上的几小时的时间专心进行研究。他把小玻
->   璃片研磨成镜片，然后把研磨好的镜片装到镜筒里，用此来观察细小的物件。伯爵被
->   这个前所未见的可以把东西放大观察的小发明迷住了。他邀请这个怪人住到了他的城
->   堡里，作为伯爵的门客，此后他可以专心投入所有的时间来研究这些光学器件。
+>   璃片研磨成镜片，然后把研磨好的镜片装到镜筒里，用此来观察细小的物件。**伯爵
+>   被这个前所未见的可以把东西放大观察的小发明迷住了。**他邀请这个怪人住到了他
+>   的城堡里，作为伯爵的门客，此后他可以专心投入所有的时间来研究这些光学器件。
 
 [Terminator 2（终结者）](http://www.imdb.com/character/ch0000933/quotes)
 
@@ -132,3 +137,4 @@ Credits
 -   中文字体：[造字工房](http://www.makefont.com/)
 -   ODT 模板：[andrewheiss/Global-Pandoc-files: Stuff that goes in ~/.pandoc](https://github.com/andrewheiss/Global-Pandoc-files)
 -   转化 PDF：[LibreOffice 简体中文官方网站 - 自由免费的办公套件](http://zh-cn.libreoffice.org/)
+-   [Inconsolata](http://levien.com/type/myfonts/inconsolata.html)

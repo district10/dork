@@ -1,8 +1,9 @@
 MDS     := $(wildcard *.md)
-PDFS    := $(MDS:%.md=%.pdf)
-DOCXS   := $(MDS:%.md=%.docx)
 ODTS    := $(MDS:%.md=%.odt)
-OUTPUTS := $(ODTS) $(DOCXS) $(PDFS)
+DOCXS   := $(MDS:%.md=%.docx)
+PDFS    := $(MDS:%.md=%.pdf)
+DOCX2PDF:= $(DOCXS:%=%.pdf)
+OUTPUTS := $(ODTS) $(DOCXS) $(PDFS) $(DOCX2PDF)
 
 all: $(OUTPUTS)
 clean:
@@ -20,11 +21,14 @@ clean:
 
 odtexport = \
 			soffice \
-					--headless --convert-to pdf $(1) || \
+					--headless --convert-to $(1) $(2) || \
 			"/c/Program Files (x86)/LibreOffice 5/program/soffice.exe" \
-					--headless --convert-to pdf $(1)
+					--headless --convert-to $(1) $(2)
+%.docx:	%
+	cp $< $@
 %.docx:	%.odt
-	$(call odtexport, $<)
+	$(call odtexport, docx, $<)
 %.pdf: %.odt
-	$(call odtexport, $<)
-
+	$(call odtexport, pdf, $<)
+%.pdf: %.docx
+	$(call odtexport, pdf, $<)
